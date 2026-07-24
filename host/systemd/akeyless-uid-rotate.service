@@ -1,0 +1,8 @@
+[Unit]
+Description=Rotate Akeyless Universal Identity token
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/.akeyless-uid/rotate-uid-token.sh

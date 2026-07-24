@@ -1,0 +1,12 @@
+[Unit]
+Description=Periodic Akeyless UID token rotation
+
+[Timer]
+# First rotation 2 min after the timer starts, then every 15 min. The interval
+# must stay well under the auth method's jwt-ttl (default 60 min) so the child
+# token is always refreshed before it can expire.
+OnActiveSec=2min
+OnUnitActiveSec=15min
+
+[Install]
+WantedBy=timers.target

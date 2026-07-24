@@ -1,0 +1,13 @@
+# never commit token material
+uid-token
+*.uid-token
+**/token/
+.akeyless-uid/
+
+# .NET build output
+bin/
+obj/
+
+# editor noise
+.vs/
+*.user
